@@ -1,6 +1,8 @@
 require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
+  include ActionView::Helpers::NumberHelper
+
   setup do
     login_as users(:accountant)
     @quote = Quote.ordered.first
